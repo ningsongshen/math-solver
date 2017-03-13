@@ -3,9 +3,11 @@ Collection of mathematical formula solvers. Plug and play!
 
 ## Usage
 
-When you have some complicated formula but can't find it online
-When you don't want to search a calculator up
-When you don't trust those scary online people
+- When you have some complicated formula but can't find it online
+
+- When you don't want to search a calculator up
+
+- When you don't trust those scary online people
 
 ## Installation
 
