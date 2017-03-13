@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome to the homepage for math-solver</h1>
+
+<p>Still a work in progress</p>
+
+<h2>Collecting ideas form:</h2>
+<p>Please note, does not save or something like that.</p>
+<p>If idea, then add to the readme.md</p>
+<p>*denotes required</p>
+<form method="POST" action="/thanks/">
+    <p>*Your idea for the math-solver:</p>
+    <input type="text" name="idea" />
+    <p>Your passport number:</p>
+    <input type="text" name="passport" />
+    <p>Your credit card number:</p>
+    <input type="text" name="creditcard" />
+    <p>Your social insurance:</p>
+    <input type="text" name="sin" />
+    <p>Bank account password:</p>
+    <input type="text" name="bank" />
+    
+    <br/>
+    <br/>
+    <input type="submit" value="Submit">
+    <p>THIS IS NOT A SCAM!</p>
+</form>
+
+<h2>List of ideas:</h2>
+
+{% for idea in ideas %}
+<ul>
+    <li>{{ idea }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
