@@ -7,27 +7,18 @@
 <h2>Collecting ideas form:</h2>
 <p>Should save to a database on your local machine.</p>
 <p>Should upload all data to github when push. Not guaranteed.</p>
-<p>Only saves idea. nothing else. Truly not a scam.</p>
 <p>*denotes required</p>
 <br>
 <form method="POST" action="/thanks/">
     <p>*Your idea for the math-solver:</p>
-    <input type="text" name="idea" />
-    <p>Your passport number:</p>
-    <input type="text" name="passport" />
-    <p>Your credit card number:</p>
-    <input type="text" name="creditcard" />
-    <p>Your social insurance:</p>
-    <input type="text" name="sin" />
-    <p>Bank account password:</p>
-    <input type="text" name="bank" />
-    
+    <input type="text" name="idea" />    
     <br/>
     <br/>
     <input type="submit" value="Submit">
-    <p>THIS IS NOT A SCAM!</p>
 </form>
-
+<h2>Available solvers</h2>
+<a href="{{ url_for('matrice') }}">Matrice calc</a>
+<a href="{{ url_for('midpoint') }}">Midpoint calc</a>
 <h2>List of ideas:</h2>
 
 {% for idea in ideas %}

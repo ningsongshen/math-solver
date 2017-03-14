@@ -29,7 +29,7 @@ app = Flask(__name__)
 def index():
     list_ideas = []
     for thing in Idea.select():
-        print(thing.text)
+        # debuging print(thing.text)
         list_ideas.append(thing.text)
     return render_template('index.html', ideas=list_ideas)
  
@@ -40,3 +40,13 @@ def thanks():
     add_thing = Idea(text=idea)
     add_thing.save()
     return render_template('thanks.html')
+    
+    
+    
+@app.route('/matrice/')
+def matrice():
+    return('Calculating matrices here')
+    
+@app.route('/midpoint/')
+def midpoint():
+    return('Calculating midpoints here')
