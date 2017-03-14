@@ -2,7 +2,6 @@
 {% block body %}
 
 <link href="https://fonts.googleapis.com/css?family=Varela|Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="main.css">
 
 <h1>Welcome to the homepage for math-solver</h1>
 
@@ -14,7 +13,7 @@
 	<p>Should upload all data to github when push. Not guaranteed.</p>
 	<p>*denotes required</p>
 	<br>
-	<form method="POST" action="/thanks/">
+	<form method="POST" action="/">
 	    <p>*Your idea for the math-solver:</p>
 	    <input type="text" name="idea" />    
 	    <br/>
@@ -22,8 +21,9 @@
 	    <input type="submit" value="Submit">
 	</form>
 	<h2>Available solvers</h2>
-	<a href="{{ url_for('matrix') }}">Matrix calc</a>
-	<a href="{{ url_for('midpoint') }}">Midpoint calc</a>
+	<a href="{{ url_for('matrice') }}">Matrix</a>
+	<a href="{{ url_for('midpoint') }}">Midpoint</a>
+    <a href="{{ url_for('pythagorean') }}">Hypotenuse</a>
 	<h2>List of ideas:</h2>
 
 	{% for idea in ideas %}

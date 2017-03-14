@@ -1,14 +1,26 @@
 <!--This is the layout template for all other pages.
 
 To make change effective everywhere, change it here!-->
+<!DOCTYPE html>
 <html>
     <head>
         <title>A Math solver</title>
-        <link rel="stylesheet" href="static/main.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div>
+                {% for message in messages %}
+                    <h2 id="ok">{{ message }}</h2>
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
     </head>
     <body>
         {% block body %}
         {% endblock %}
-        
+        <br/>
+        <a href="{{ url_for('index') }}">Back home</a>
     </body>
 </html>
