@@ -9,7 +9,7 @@ To make change effective everywhere, change it here!-->
         
         {% with messages = get_flashed_messages() %}
             {% if messages %}
-            <div>
+            <div style="color: red;">
                 {% for message in messages %}
                     <h2 id="ok">{{ message }}</h2>
                 {% endfor %}

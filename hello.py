@@ -4,6 +4,7 @@
 
 from flask import Flask, url_for, render_template, request, flash, redirect
 from peewee import *
+from flask_admin import Admin
 import math
 
 FLASK_DEBUG = 1
@@ -21,10 +22,11 @@ db.connect()
 
 
 # If the idea model doesn't exist, create it   
-db.create_tables([Idea])
+# db.create_tables([Idea])
 
 
 app = Flask(__name__)
+admin = Admin(app, name='math-solver') #template_mode='bootstrap3')
 app.secret_key = '7eb85145bcc37b282fa25df32c6f92dfb5d1f5f2f6057913'
 
 # homepage, has a form
@@ -54,9 +56,12 @@ def index():
     
     
     
-@app.route('/matrice/')
+@app.route('/matrice/', methods=['GET', 'POST'])
 def matrice():
-    return('Calculating matrices here')
+    if request.method == 'POST':
+        flash('This thing doesn\'t work yet')
+        return render_template('matrices.html')
+    return(render_template('matrices.html'))
     
 @app.route('/midpoint/')
 def midpoint():
@@ -69,7 +74,7 @@ def pythagorean():
             a = float(request.form['a'])
             b = float(request.form['b'])
             c = math.sqrt(a**2 + b**2)
-            flash('Result: ' + str(c) + '. Try another number!') 
+            flash('Result: ' + str(c)) 
         except ValueError:
             flash('NOT A NUMBER')
     return render_template('pythagorean.html')
