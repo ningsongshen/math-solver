@@ -1,5 +1,5 @@
 # math-solver
-Collection of mathematical formula solvers. Plug and play!
+An advanced calculator
 
 ## Usage
 
@@ -9,22 +9,13 @@ Collection of mathematical formula solvers. Plug and play!
 
 - When you don't trust those scary online people
 
+- When you NEED a calculator!
+
 ## Installation
 
-Uses python 3
+Open up index.html in your browser! It just works. No fuss.
 
-Recommended: figure out virtualenv
-
-Install flask and peewee
-
-If you're using pip:
-
-~~~~ 
-pip install flask
-pip install peewee 
-~~~~
-
-Then run the flask app using the flask tutorial's guidelines
+Ignore python files for now.
 
 ## Bugs and Problems
 
