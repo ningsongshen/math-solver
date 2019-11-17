@@ -11,10 +11,10 @@ function divide(a, b) {
     return a / b;
 }
 function operate(op, a, b) {
-    operations = {"+": plus,
-                  "-": minus,
-                  "*": multiply,
-                  "/": divide,
+    operations = {["+"]: plus,
+                  ["-"]: minus,
+                  ["*"]: multiply,
+                  ["/"]: divide,
                 };
 
     return operations[op](a, b);
