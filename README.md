@@ -1,4 +1,5 @@
 # math-solver
+
 An advanced calculator
 
 ## Usage
@@ -23,4 +24,6 @@ Please open a new issue for this repository
 
 We welcome new ideas also.
 
+### Known Issues
 
+When the operators are clicked after the user has already completed an operation, the equals sign does not revert from the AC. This is annoying.

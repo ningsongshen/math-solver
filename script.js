@@ -58,7 +58,7 @@ function displayNumber() {
 function processHalf() {
     operators.forEach(operator => {
         operator.addEventListener("click", function() {
-            equal.querySelector("p").innerHTML == "="
+            equal.querySelector("p").innerHTML = "=";
             if (result.innerHTML != "") {
                 number1 = Number(result.innerHTML);
                 operation = operator.querySelector("p").innerHTML;
