@@ -1,0 +1,2 @@
+# Riemann sums
+# taylor series

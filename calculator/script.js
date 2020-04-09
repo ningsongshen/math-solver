@@ -40,7 +40,9 @@ for (i = 0; i < gridSize; i++) {
 const numbers = document.querySelectorAll(".number");
 displayNumber();
 
-const decimal = document.querySelectorAll(".decimal");
+const decimal = document.querySelector(".decimal");
+addDecimal();
+
 const equal = document.querySelector(".equal");
 calculateResult();
 
@@ -84,3 +86,10 @@ function calculateResult() {
     })
 }
 
+function addDecimal() {
+    decimal.addEventListener("click", function() {
+        if (result.innerHTML.indexOf(".") == -1) {
+            result.innerHTML += ".";
+        }
+    })
+}
